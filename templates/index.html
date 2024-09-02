@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src=" static/images/logo.png" height='50' width='50'/>
+          <a class="navbar-brand" href="#">Royal Enfield</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.royalenfield.com/in/en/home/">offical site</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  more
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">purchase</a></li>
+                  <li><a class="dropdown-item" href="#">contact Us</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">help</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex flex-wrap justify-content-around">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-1.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">GRIP</h5>
+          <p class="card-text">To know about the grip of the 'Royal Enfield Continental GT650 click below'.</p>
+          <a href="{% url 'grip' %}" class="btn btn-primary">Click here</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Engine</h5>
+          <p class="card-text">To know about it powerfull engine please click below!!</p>
+          <a href="{% url 'engine' %}" class="btn btn-primary">click here</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-3.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Exhaust</h5>
+          <p class="card-text">To know about the exhaust of the 'Royal Enfield Continental GT650'</p>
+          <a href="#" class="btn btn-primary">Click here</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-4.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Lever</h5>
+          <p class="card-text">To know about the handle and the lever of the bike please click below</p>
+          <a href="#" class="btn btn-primary">Click here</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-5.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Suspension</h5>
+          <p class="card-text">To know about the suspension of the bike please click below</p>
+          <a href="#" class="btn btn-primary">Click here</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="static/images/gallery-6.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Other Feature</h5>
+          <p class="card-text">To know about other features about the bike click below</p>
+          <a href="#" class="btn btn-primary">Click here</a>
+        </div>
+      </div>
+    </div>
+
+    {% for i in emp %}
+
+  <h1>{{i.id}}</h1>
+
+  {% endfor %}
+ {% for i in fm %}
+
+  <h1>{{i.id}}</h1>
+
+  {% endfor %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
